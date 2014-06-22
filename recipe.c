@@ -14,7 +14,7 @@ int count_lines(FILE *fp){
 
 int main(int argc, char **argv){
     FILE *recipe_fp;
-    char recipe_name[256]; // 各行
+    char recipe_name[MAX_DATA_SIZE]; // 各行
     int selected_recipe_id;
 
     if(argc == 0) {
@@ -31,11 +31,13 @@ int main(int argc, char **argv){
     }
 
     int num_recipes = count_lines(recipe_fp); // レシピの個数
-    char recipes[num_recipes]; // 各レシピ
-    int id = 1; // レシピのID
+    char recipes[num_recipes][MAX_DATA_SIZE]; // 各レシピ
+    int id = 0; // レシピのID
     while(fgets(recipe_name, sizeof(recipe_name), recipe_fp) != NULL) {
         recipes[id] = recipe_name;
         id++;
+        // printf("%d: ", id++);
+        // printf("%s", recipe_string);
     }
     printf("レシピファイルの行数 = %d\n", num_recipes);
 
