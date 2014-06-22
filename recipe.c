@@ -11,7 +11,9 @@ int main(void){
         exit(EXIT_FAILURE);
     }
 
-    while(fgets(recipe_string, 256, recipe_fp) != NULL) {
+    int id = 1; // レシピのID
+    while(fgets(recipe_string, sizeof(recipe_string), recipe_fp) != NULL) {
+        printf("%d: ", id++);
         printf("%s", recipe_string);
     }
 
