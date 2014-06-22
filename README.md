@@ -23,3 +23,10 @@ C言語
 ```
 
 * レシピ名は256byteまでです
+
+### spec8: ユーザー名の指定方法
+
+```
+./recipe ${レシピID}
+input user name: hoge
+```
