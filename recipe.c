@@ -30,7 +30,6 @@ int main(int argc, char **argv){
         exit(EXIT_FAILURE);
     }
 
-<<<<<<< HEAD
     int num_recipes = count_lines(recipe_fp); // レシピの個数
     char recipes[num_recipes][MAX_DATA_SIZE]; // 各レシピ
     int id = 0; // レシピのID
@@ -39,10 +38,8 @@ int main(int argc, char **argv){
         id++;
         // printf("%d: ", id++);
         // printf("%s", recipe_string);
-=======
     while(fgets(recipe_string, 256, recipe_fp) != NULL) {
         printf("%s", recipe_string);
->>>>>>> parent of e7497bf... spec5: レシピにIDを振って出力
     }
     printf("レシピファイルの行数 = %d\n", num_recipes);
 
